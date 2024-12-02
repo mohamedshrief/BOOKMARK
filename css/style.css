@@ -1,0 +1,122 @@
+:root{
+    --TitelFontFamily :  "Pacifico", cursive;
+    --secondaryTitelFontFamily :  "Righteous", sans-serif;
+    --internalFontFamily :  "PT Sans Caption", sans-serif;
+    --TitelBlack :  rgb(53, 46, 40);
+    --internalBlack :  rgb(33, 37, 41);
+}
+*{
+    font-family: var(--internalFontFamily);
+}
+body{
+    background-color: #F7ECDE;
+}
+h1{
+    color: var(--TitelBlack);
+    font-family: var(--TitelFontFamily);
+    width: fit-content;
+    margin: auto;
+    margin-top: 46px;
+    font-size: 50px;
+    font-family: 500;
+    position: relative;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    background-color: #FEC260;
+    width: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+h1:hover:before{
+    height: 60%;
+}
+#data-entry-side{
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}
+.titel h2{
+    text-align: center;
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #ffd900ed);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 30px;
+}
+
+form label{
+    font-family: var(--internalFontFamily);
+    color: var(--internalBlack);
+    font-weight: 600;
+}
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+#results-side{
+    margin-bottom: 100px;
+}
+#results-side .row h6{
+    color: var(--internalBlack);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+#results-side .row{
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(33, 37, 41, 0.153);
+}
+.btn-info{
+    background-color: #8a9e23 !important;
+    border: none !important;
+    outline:  none !important;
+}
+.btn-info:hover{
+    background-color: #6e8018 !important;
+}
+#results-side .content-row{
+    padding: 10px;
+}
+#results-side .content-row h6{
+    font-weight: 400;
+}
+
+#nameAgain, #urlAgain{
+    background-color: #EC1000;
+    font-size: 14px;
+    box-shadow: 0px -3px 17px 0px #fb6944;
+    padding: 10px 5px;
+    max-width: 500px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 8px;
+    font-weight: 600;
+    display: none;
+}
+#urlAgain{
+    text-align: start;
+    max-width: 100%;
+}
+#repeatAlert{
+    background-color:#99cc33;
+    font-size: 14px;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 8px;
+    font-weight: 600;
+    display: none;
+    box-shadow: 0px -3px 17px 0px #99cc33;
+}
+#previousUrlName{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
