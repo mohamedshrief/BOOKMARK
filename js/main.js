@@ -34,6 +34,9 @@ function addbookmark(){
         siteUrl : url.value,
         id : `${Math.random()*10000} - ${Math.random()*10000}`
     }
+    if (!bookmark.siteUrl.startsWith("http://") && !bookmark.siteUrl.startsWith("https://")) {
+        bookmark.siteUrl = `http://${bookmark.siteUrl}`;
+    }
     clearAlert();
     var bmNameChecker = checker(bookmark, "name");
     var bmUrlChecker = checker(bookmark, "siteUrl");
